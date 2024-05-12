@@ -36,6 +36,7 @@ class Migration(SchemaMigration):
             ('is_umts', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('is_cdma', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('is_lte', self.gf('django.db.models.fields.BooleanField')(default=False)),
+            ('is_5g', self.gf('django.db.models.fields.BooleanField')(default=False)),            
             ('notes', self.gf('django.db.models.fields.CharField')(max_length=500, blank=True)),
             ('station_status', self.gf('django.db.models.fields.CharField')(max_length=32)),
             ('edit_status', self.gf('django.db.models.fields.CharField')(max_length=32)),
