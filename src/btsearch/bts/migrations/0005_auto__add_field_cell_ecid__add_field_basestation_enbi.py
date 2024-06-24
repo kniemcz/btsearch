@@ -41,6 +41,7 @@ class Migration(SchemaMigration):
             'is_lte': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'is_networks': ('django.db.models.fields.BooleanField', [], {'default': 'False', 'db_index': 'True'}),
             'is_umts': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
+            'is_5g': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'location': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'base_stations'", 'to': u"orm['bts.Location']"}),
             'location_details': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'network': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'base_stations'", 'to': u"orm['bts.Network']"}),
