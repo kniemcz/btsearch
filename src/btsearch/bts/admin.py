@@ -41,6 +41,7 @@ class BaseStationAdmin(admin.ModelAdmin):
         'is_umts',
         'is_cdma',
         'is_lte',
+        'is_5g',
         'is_networks',
         'notes',
         'station_status',
