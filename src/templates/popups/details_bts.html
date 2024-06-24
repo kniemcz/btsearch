@@ -70,6 +70,23 @@
             {% endfor %}
         </table>
         {% endif %}
+        {% if standard.standard == '5G' %}
+        <table class="table table-condensed table-responsive location-info">
+            <tr>
+                <th colspan="2" style="border-top: none;">{{ standard.standard }}</th>
+            </tr>
+            <tr>
+                <th>Pasmo</th>
+                <th>Uwagi</th>
+            </tr>
+            {% for cell in standard.cells %}
+            <tr {% if not cell.is_confirmed %}class="danger" title="Komórka nie potwierdzona"{% endif %}>
+                <td>{{ cell.band }}</td>
+                <td>{% if cell.notes %}{{ cell.notes }}{% else %}--{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
         {% if standard.standard == 'LTE' %}
         <table class="table table-condensed table-responsive location-info">
             <tr>
