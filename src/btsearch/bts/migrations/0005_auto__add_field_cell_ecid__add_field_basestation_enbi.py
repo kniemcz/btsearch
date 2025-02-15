@@ -73,6 +73,7 @@ class Migration(SchemaMigration):
             'lac': ('django.db.models.fields.PositiveSmallIntegerField', [], {'default': '0'}),
             'notes': ('django.db.models.fields.CharField', [], {'max_length': '500', 'blank': 'True'}),
             'standard': ('django.db.models.fields.CharField', [], {'max_length': '8', 'db_index': 'True'}),
+            'duplex': ('django.db.models.fields.CharField', [], {'max_length': '3', 'blank': 'True'}),
             'ua_freq': ('django.db.models.fields.PositiveSmallIntegerField', [], {'default': '0'})
         },
         u'bts.location': {
