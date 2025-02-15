@@ -154,6 +154,7 @@
                     <th>Pasmo</th>
                     <th>Potw.?</th>
                     <th>Nośna</th>
+                    <th>Duplex</th>
                     <th>LAC</th>
                     <th>CID/CLID</th>
                     <th>LongCID/ECID</th>
@@ -169,6 +170,10 @@
                     <td>
                        {{ cell_form.band }}
                        {{ cell_form.band.errors }}
+                    </td>
+                    <td>
+                       {{ cell_form.duplex }}
+                       {{ cell_form.duplex.errors }}
                     </td>
                     <td>
                        {{ cell_form.is_confirmed }}
