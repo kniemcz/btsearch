@@ -254,6 +254,10 @@ class Cell(models.Model):
         choices=BANDS,
         db_index=True,
     )
+    duplex = models.CharField(
+        max_length=500,
+        blank=True,
+    )
     ua_freq = models.PositiveSmallIntegerField(
         verbose_name="UaFreq",
         default=0,
