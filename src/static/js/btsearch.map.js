@@ -918,6 +918,16 @@ $(document).bind('keypress', '2', function(){
     ui.resetMap();
 });
 
+$(document).bind('keypress', '3', function(){
+    $('#band-filter-3500').prop('checked', !$('#band-filter-3500').prop('checked'));
+    ui.resetMap();
+});
+
+$(document).bind('keypress', '7', function(){
+    $('#band-filter-700').prop('checked', !$('#band-filter-700').prop('checked'));
+    ui.resetMap();
+});
+
 $(document).bind('keypress', '8', function(){
     $('#band-filter-800').prop('checked', !$('#band-filter-800').prop('checked'));
     ui.resetMap();
