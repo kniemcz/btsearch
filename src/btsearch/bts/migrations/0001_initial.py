@@ -51,6 +51,7 @@ class Migration(SchemaMigration):
             ('base_station', self.gf('django.db.models.fields.related.ForeignKey')(related_name='cells', to=orm['bts.BaseStation'])),
             ('standard', self.gf('django.db.models.fields.CharField')(max_length=8, db_index=True)),
             ('band', self.gf('django.db.models.fields.CharField')(max_length=8, db_index=True)),
+            ('duplex', self.gf('django.db.models.fields.CharField')(max_length=3, blank=True)),
             ('ua_freq', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
             ('lac', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
             ('cid', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
