@@ -73,15 +73,17 @@
         {% if standard.standard == '5G' %}
         <table class="table table-condensed table-responsive location-info">
             <tr>
-                <th colspan="2" style="border-top: none;">{{ standard.standard }}</th>
+                <th colspan="3" style="border-top: none;">{{ standard.standard }}</th>
             </tr>
             <tr>
                 <th>Pasmo</th>
+                <th>Duplex</th>
                 <th>Uwagi</th>
             </tr>
             {% for cell in standard.cells %}
             <tr {% if not cell.is_confirmed %}class="danger" title="Komórka nie potwierdzona"{% endif %}>
                 <td>{{ cell.band }}</td>
+                <td>{{ cell.duplex }}</td>
                 <td>{% if cell.notes %}{{ cell.notes }}{% else %}--{% endif %}</td>
             </tr>
             {% endfor %}
@@ -90,10 +92,11 @@
         {% if standard.standard == 'LTE' %}
         <table class="table table-condensed table-responsive location-info">
             <tr>
-                <th colspan="6" style="border-top: none;">{{ standard.standard }}</th>
+                <th colspan="7" style="border-top: none;">{{ standard.standard }}</th>
             </tr>
             <tr>
                 <th>Pasmo</th>
+                <th>Duplex</th>
                 <th><abbr title="Local Area Code">LAC</abbr></th>
                 <th><abbr title="eNodeB ID">eNBID</abbr></th>
                 <th><abbr title="Cell Local ID">CLID</abbr></th>
@@ -103,6 +106,7 @@
             {% for cell in standard.cells %}
             <tr {% if not cell.is_confirmed %}class="danger" title="Komórka nie potwierdzona"{% endif %}>
                 <td>{{ cell.band }}</td>
+                <td>{{ cell.duplex }}</td>              
                 <td>{{ cell.lac }}</td>
                 <td>{% if base_station.enbi == 0 %}?{% else %}{{ base_station.enbi }}{% endif %}</td>
                 <td>{{ cell.cid }}</td>
