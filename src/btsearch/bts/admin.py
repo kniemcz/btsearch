@@ -15,6 +15,7 @@ class CellInline(admin.TabularInline):
     fields = (
         'standard',
         'band',
+        'duplex',
         'ua_freq',
         'lac',
         'cid',
