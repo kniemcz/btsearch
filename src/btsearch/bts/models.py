@@ -123,6 +123,7 @@ class BaseStation(models.Model):
     is_umts = models.BooleanField(default=False)
     is_cdma = models.BooleanField(default=False)
     is_lte = models.BooleanField(default=False)
+    is_5g = models.BooleanField(default=False)
     # ^^ Really necessary? ^^
 
     is_networks = models.BooleanField(
@@ -235,7 +236,8 @@ class Cell(models.Model):
         ('900', '900'),
         ('1800', '1800'),
         ('2100', '2100'),
-        ('2600', '2600')
+        ('2600', '2600'),
+        ('3500', '3500')
     )
 
     base_station = models.ForeignKey(
