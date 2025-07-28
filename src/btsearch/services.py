@@ -171,7 +171,7 @@ class UkeLocationsFilterService(QuerysetFilterService):
         if '26034' in networks:
             return {
                 self.network_filter_field: ['26002', '26003', '26034'],
-                'permissions__case_number_orig__startswith': 'MNET',
+               # 'permissions__case_number_orig__startswith': 'MNET',
             }
         return super(UkeLocationsFilterService, self)._get_network_filter(networks)
 
@@ -188,7 +188,7 @@ class UkeLocationFilterService(QuerysetFilterService):
         if '26034' in networks:
             return {
                 self.network_filter_field: ['26002', '26003', '26034'],
-                'case_number_orig__startswith': 'MNET',
+               # 'case_number_orig__startswith': 'MNET',
             }
         return super(UkeLocationFilterService, self)._get_network_filter(networks)
 
